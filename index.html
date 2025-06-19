@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Andriadi - Front-End Developer Portfolio (HTML, Tailwind CSS, JavaScript)</title>
+    <meta name="description" content="Andriadi - Personal portfolio as a Front-End Developer. Built with HTML, Tailwind CSS, and JavaScript. Currently learning React and actively building projects. Available for freelance work.">
+</head>
+
+<body class="min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-500 overflow-x-hidden">
+
+    <!-- Tombol Toggle Dark/Light -->
+    <button id="toggleMode" class="absolute top-5 right-5 p-2 rounded-full bg-gray-700 text-white dark:bg-gray-300 dark:text-gray-800 transition duration-300 text-2xl">🌙</button>
+
+    <div class="flex flex-col lg:justify-center gap-20 pt-40 items-center">
+        <!-- Informasi Profil -->
+        <div class="text-center mb-5 px-4 space-y-4 w-4/5 mx-auto lg:w-2/5">
+            <h1 class="text-xl lg:text-3xl text-gray-900 dark:text-white font-bold capitalize">Hi, my name is <span class="text-5xl text-blue-500 dark:text-blue-500">Andriadi</span></h1>
+            <mark class="block my-4 bg-yellow-200 px-2 py-1 rounded capitalize">for this portfolio, i use html, tailwind css, javascript</mark>
+            <section class="text-gray-600 dark:text-gray-300 space-y-4 capitalize text-md lg:text-xl">
+                <p>I am a freelancer developing my front-end development skills and currently focusing on learning <span class="auto-type font-bold text-red-400 dark:text-yellow-400 text-2xl"></span>.</p>
+                <p>I am currently building a portfolio while continuing to develop my skills to become a professional front-end developer.</p>
+            </section>
+        </div>
+
+        <!-- Foto & Animasi Logo -->
+        <div>
+            <div class="relative w-[400px] h-[400px]">
+                <img id="myPhoto" src="./assets/img/andriadi.png" class="w-full h-full rounded-full relative z-10 object-cover" />
+                <img id="logoHtml" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="absolute w-20 h-20" />
+                <img id="logoCss" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="absolute w-20 h-20" />
+                <img id="logoTailwind" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" class="absolute w-20 h-20" />
+                <img id="logoJs" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="absolute w-20 h-20" />
+                <img id="logoReact" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="absolute w-20 h-20" />
+            </div>
+            <div class="flex justify-around items-center gap-4 mt-6 w-full max-w-xs mx-auto">
+                <a href="https://github.com/shietra3" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github andriadi" class="dark:invert dark:filter dark:brightness-0 w-8 h-8">
+                </a>
+                <a href="https://www.linkedin.com/in/andriadishietra/" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="linkedin andriadi" class="w-8 h-8">
+                </a>
+                <a href="" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/upwork.svg" alt="upwork andriadi" class="dark:invert dark:filter dark:brightness-0 w-8 h-8">
+                </a>
+                <a href="https://www.instagram.com/shietra3/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="instagram andriadi" class="w-8 h-8">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tombol See Project dan Tempat Project -->
+    <div class="py-40 lg:pt-40 text-center">
+        <button id="seeProjectBtn" class="text-lg font-bold capitalize bg-blue-400 px-10 py-2 rounded-xl dark:bg-blue-600 dark:text-white transition hover:bg-blue-500 dark:hover:bg-blue-700">See Project</button>
+
+        <!-- Section Project -->
+        <div id="projectSection" class="mt-8 hidden space-y-4"></div>
+    </div>
+
+    <!-- Modal / Popup -->
+    <div id="projectModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-2xl text-center w-80 max-w-full mx-4 relative">
+            <h2 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Coming Soon!</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-5">Projects belum tersedia. Stay tuned!</p>
+            <button id="closeModal" class="px-5 py-2 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600 transition">Close</button>
+        </div>
+    </div>
+
+    <script src="./assets/app/project.js"></script>
+    <script src="./assets/app/tailwind.config.js"></script>
+    <script src="./assets/app/toggle.js"></script>
+    <script src="./assets/app/app.js"></script>
+    <script src="./assets/app/type.js"></script>
+</body>
+
+</html>
